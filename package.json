@@ -1,6 +1,6 @@
 {
   "name": "customized-progress-webpack-plugin",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A simple progress plugin for Webpack.",
   "main": "index.js",
   "scripts": {
