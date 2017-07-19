@@ -1,0 +1,27 @@
+{
+  "name": "customized-progress-webpack-plugin",
+  "version": "0.0.1",
+  "description": "A simple progress plugin for Webpack.",
+  "main": "index.js",
+  "scripts": {
+    "automatic-release": "automatic-release",
+    "list-deployed-files": "pkgfiles --sort=name"
+  },
+  "repository": "git@github.com:thundernet8/customized-progress-webpack-plugin.git",
+  "author": "WuXueqian <wuxueqian2010@hotmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^2.0.1",
+    "elegant-spinner": "^1.0.1",
+    "figures": "^2.0.0",
+    "log-update": "^2.0.0"
+  },
+  "peerDependencies": {
+    "webpack": ">=2.0.0"
+  },
+  "devDependencies": {
+    "automatic-release": "^1.0.5",
+    "pkgfiles": "^2.3.2",
+    "webpack": "^3.3.0"
+  }
+}
