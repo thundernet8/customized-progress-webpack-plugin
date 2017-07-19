@@ -48,7 +48,7 @@ module.exports = function CompactLogger() {
         }
         previousStep = 1;
 
-        logLines.push(chalk.white(`  ${figures.pointer} Compile modules`));
+        logLines.push(chalk.white(`  ${frame()} Compile modules`));
       } else if (progress >= 0.1) {
         logLines.push(chalk.green(`  ${figures.tick} Compile modules`));
       }
@@ -64,7 +64,7 @@ module.exports = function CompactLogger() {
         // Log progress line (with sub-progress indicator)
         const subProgress = Math.round((progress - 0.1) * 10000 / 60);
         logLines.push(
-          chalk.white(`  ${figures.pointer} Build modules (${subProgress}%)`)
+          chalk.white(`  ${frame()} Build modules (${subProgress}%)`)
         );
 
         // Log additional information (if possible)
@@ -107,7 +107,7 @@ module.exports = function CompactLogger() {
           );
         }
       } else if (progress > 0.7) {
-        logLines.push(chalk.green(`  ${frame()} Build modules`));
+        logLines.push(chalk.green(`  ${figures.tick} Build modules`));
       }
 
       // STEP 3: OPTIMIZATION
@@ -121,7 +121,7 @@ module.exports = function CompactLogger() {
         // Log progress line (with sub-progress indicator)
         const subProgress = Math.round((progress - 0.71) * 10000 / 23);
         logLines.push(
-          chalk.white(`  ${figures.pointer} Optimize modules (${subProgress}%)`)
+          chalk.white(`  ${frame()} Optimize modules (${subProgress}%)`)
         );
 
         const formattedMessage = `${message[0].toUpperCase()}${message.slice(
@@ -147,7 +147,7 @@ module.exports = function CompactLogger() {
         }
         previousStep = 4;
 
-        logLines.push(chalk.white(`  ${figures.pointer} Emit files`));
+        logLines.push(chalk.white(`  ${frame()} Emit files`));
       } else if (progress === 1) {
         logLines.push(chalk.green(`  ${figures.tick} Emit files`));
       }
